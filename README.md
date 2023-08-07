@@ -18,3 +18,5 @@ Ah, IAs adoram ter surtos, pesadelos...
 E agora, será que eles conseguirão chegar em casa?
 
 ## Referências do jogo
+
+Eu gosto de música antiga.
