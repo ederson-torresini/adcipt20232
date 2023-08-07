@@ -1,4 +1,5 @@
-# adcipt20232
+# ADC/IPT 2023.2
+
 Projetos das disciplinas de Administração de Redes de Computadores (ADC) e Telefonia IP (IPT) do Curso Técnico Integrado ao Ensino Médio em Telecomunicações do Instituto Federal de Santa Catarina (IFSC) câmpus São José.
 
 ## Premissa básica do jogo
@@ -15,3 +16,5 @@ O porém é que a resposta de um está com o outro: Tobias tem os livros de prog
 Ah, IAs adoram ter surtos, pesadelos...
 
 E agora, será que eles conseguirão chegar em casa?
+
+## Referências do jogo
