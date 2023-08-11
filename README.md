@@ -19,4 +19,19 @@ E agora, será que eles conseguirão chegar em casa?
 
 ## Referências do jogo
 
-Eu gosto de música antiga.
+Embora o filme [A Noite dos Mortos-Vivos](https://www.imdb.com/title/tt0063350/), de 1968, não seja exatamente sobre zumbis, ainda sim é um ótimo ponto de partida para esse gênero de filme. Para a ideia mais próxima da cena da biblioteca, [Madrugada dos Mortos](https://www.imdb.com/title/tt0363547/). Quanto às IAs temperamentais, [I am Mother](https://www.imdb.com/title/tt6292852/) e [Ex_Machina: Instinto Artificial](https://www.imdb.com/title/tt0363547/).
+
+Na literatura:
+
+- Arthur C. Clarke:
+  - A Cidade e as Estrelas;
+  - Série Rama;
+- David Gerrold: O Diabólico Cérebro Eletrônico;
+- Isaac Asimov:
+  - _Nightfall_;
+  - Os Nove Amanhãs;
+- Philip K. Dick:
+  - Androides sonham com Ovelhas Elétricas?;
+  - Ubik;
+- William Gibson: Neuromancer.
+
