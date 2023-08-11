@@ -8,10 +8,10 @@ Dois estudantes do IFSC São José, Tobias e Lola, estudaram demais e acordaram 
 Dentro do câmpus.
 Presos em suas salas.
 Tobias está na biblioteca, enquanto que Lola se vê sozinha no Laboratório de Informática.
-O problema é que na biblioteca todos os alunos são zumbis.
+O problema é que na biblioteca todos os alunos são zumbis (exceto Tobias...).
 No laboratório de Informática, os computadores rodam IAs bizarras.
 Para saírem de lá, Tobias precisa chegar até a porta, e para isso precisa enfrentar os zumbis em trivias.
-Lola, por sua vez, precisa decifrar códigos para desligar as IAs que teimam em controlar o prédio: travas magnéticas, câmeras etc.
+Lola precisa decifrar códigos para desligar as IAs que teimam em controlar o prédio: travas magnéticas, câmeras etc.
 O porém é que a resposta de um está com o outro: Tobias tem os livros de programação a disposição; Lola, por sua vez, tem as IAs que dão (quase sempre...) as respostas para as perguntas dos zumbis.
 Ah, IAs adoram ter surtos, pesadelos...
 
@@ -34,4 +34,3 @@ Na literatura:
   - Androides sonham com Ovelhas Elétricas?;
   - Ubik;
 - William Gibson: Neuromancer.
-
