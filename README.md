@@ -13,7 +13,7 @@ No laboratório de Informática, os computadores rodam IAs bizarras.
 Para saírem de lá, Tobias precisa chegar até a porta, e para isso precisa enfrentar os zumbis em trivias.
 Lola precisa decifrar códigos para desligar as IAs que teimam em controlar o prédio: travas magnéticas, câmeras etc.
 O porém é que a resposta de um está com o outro: Tobias tem os livros de programação a disposição; Lola, por sua vez, tem as IAs que dão (quase sempre...) as respostas para as perguntas dos zumbis.
-Ah, IAs adoram ter surtos, pesadelos...
+Ah, IAs adoram ter alucinações...
 
 E agora, será que eles conseguirão chegar em casa?
 
