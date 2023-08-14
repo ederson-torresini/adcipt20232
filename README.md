@@ -19,7 +19,9 @@ E agora, será que eles conseguirão chegar em casa?
 
 ## Referências do jogo
 
-Embora o filme [A Noite dos Mortos-Vivos](https://www.imdb.com/title/tt0063350/), de 1968, não seja exatamente sobre zumbis, ainda sim é um ótimo ponto de partida para esse gênero de filme. Para a ideia mais próxima da cena da biblioteca, [Madrugada dos Mortos](https://www.imdb.com/title/tt0363547/). Quanto às IAs temperamentais, [I am Mother](https://www.imdb.com/title/tt6292852/) e [Ex_Machina: Instinto Artificial](https://www.imdb.com/title/tt0363547/).
+Embora o filme [A Noite dos Mortos-Vivos](https://www.imdb.com/title/tt0063350/), de 1968, não seja exatamente sobre zumbis, ainda sim é um ótimo ponto de partida para esse gênero de filme.
+Para a ideia mais próxima da cena da biblioteca, [Madrugada dos Mortos](https://www.imdb.com/title/tt0363547/).
+Quanto às IAs temperamentais, [I am Mother](https://www.imdb.com/title/tt6292852/) e [Ex_Machina: Instinto Artificial](https://www.imdb.com/title/tt0363547/).
 
 Na literatura:
 
@@ -34,6 +36,15 @@ Na literatura:
   - Androides sonham com Ovelhas Elétricas?;
   - Ubik;
 - William Gibson: Neuromancer.
+
+## Jogo ideal
+
+Se houvesse recursos infinitos, o jogo ideal seria uma jornada pela mente interconectada dos dois jogadores.
+Eles não sabem (ainda), mas seu pai capturou-os e conectou seus cérebros na Grande Mente, algo que ele tem buscado [há bastante tempo](https://github.com/boidacarapreta/adcipt20222).
+O jogo, assim, é a descoberta dos dois irmãos por um caminho transcedental através de planos criativos e, por que não, psicodélicos.
+Quando ele apenas imaginavam estar presos na biblioteca e laboratório de informática, era apenas a primeira camada de seus subconscientes.
+O que vem, a seguir, são labirintos intrincados e, cada vez mais, assustadores, uma vez que irão mostrar os medos e cada um deles.
+Labirintos que, cabe destacar, mudam ao longo do tempo...
 
 ## Jogos
 
