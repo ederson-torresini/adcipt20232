@@ -26,14 +26,21 @@ Na literatura:
 ### Jogo ideal
 
 Se houvesse recursos infinitos, o jogo ideal seria uma jornada pela mente interconectada dos dois jogadores.
+
+Tobias, 23 anos, impulsivo, rápido, temperamental. Lola, 15 anos, analítica, estrategista, cuidadosa.
 Eles não sabem (ainda), mas seu pai capturou-os e conectou seus cérebros na Grande Mente, algo que ele tem buscado [há bastante tempo](https://github.com/boidacarapreta/adcipt20222).
 O jogo, assim, é a descoberta dos dois irmãos por um caminho transcedental através de planos criativos e, por que não, psicodélicos.
 O que vem, a seguir, são labirintos intrincados e, cada vez mais, assustadores, uma vez que irão mostrar os medos a cada um deles.
 Labirintos que, cabe destacar, mudam ao longo do tempo...
 
+No final do labirinto, eles encontram o pai imerso na Grande Mente, e precisam usar os artefatos recolhidos no labirinto para libertá-lo e voltarem, juntos, para o mundo real.
+
 ### Regras
 
-Este é um detalhe importante: a cada intervalo de tempo, o mapa muda: as camadas do labirinto se alternam na tela, alterando as áreas de colisão. O labirinto, na prática, está vivo. E pulsando. Há apenas um único inimigo: o próprio jogador (e seus medos).
+Este é um detalhe importante: a cada intervalo de tempo, o mapa muda: as camadas do labirinto se alternam na tela, alterando as áreas de colisão.
+O labirinto, na prática, está vivo.
+E pulsando.
+Há apenas um único inimigo: o próprio jogador (e seus medos).
 
 ### Objetivo
 
