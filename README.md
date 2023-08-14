@@ -8,13 +8,14 @@ Dois irmãos, Tobias e Lola, acordam em um labirinto. Ou melhor, acordam separad
 
 Ou um pesadelo.
 
-## Referências do jogo
+### Referências do jogo
 
 Filmes:
 
 - Ghost in the Shell;
 - Paprika;
 - Matrix;
+- Cubo.
 
 Na literatura:
 
@@ -22,16 +23,30 @@ Na literatura:
 - Philip K. Dick: Ubik;
 - William Gibson: Neuromancer.
 
-## Jogo ideal
+### Jogo ideal
 
 Se houvesse recursos infinitos, o jogo ideal seria uma jornada pela mente interconectada dos dois jogadores.
 Eles não sabem (ainda), mas seu pai capturou-os e conectou seus cérebros na Grande Mente, algo que ele tem buscado [há bastante tempo](https://github.com/boidacarapreta/adcipt20222).
 O jogo, assim, é a descoberta dos dois irmãos por um caminho transcedental através de planos criativos e, por que não, psicodélicos.
-Quando ele apenas imaginavam estar presos na biblioteca e laboratório de informática, era apenas a primeira camada de seus subconscientes.
-O que vem, a seguir, são labirintos intrincados e, cada vez mais, assustadores, uma vez que irão mostrar os medos e cada um deles.
+O que vem, a seguir, são labirintos intrincados e, cada vez mais, assustadores, uma vez que irão mostrar os medos a cada um deles.
 Labirintos que, cabe destacar, mudam ao longo do tempo...
 
-## Jogos
+### Regras
+
+Este é um detalhe importante: a cada intervalo de tempo, o mapa muda: as camadas do labirinto se alternam na tela, alterando as áreas de colisão. O labirinto, na prática, está vivo. E pulsando. Há apenas um único inimigo: o próprio jogador (e seus medos).
+
+### Objetivo
+
+Para conseguirem terminar o jogo, basta chegar ao final do labirinto: o centro onde os irmãos se encontrarão e, juntos, terão forças para enfrentar o pai - que os aprisionou (contra sua vontade...).
+
+### Formas de receita
+
+Como formas de receita, estão previstos:
+
+- Compra de créditos para estender o relógio;
+- Personalização de personagens e mapas.
+
+## Jogos das Equipes
 
 | Equipe | Jogo | Entrega 1 |
 |-|-|-|
