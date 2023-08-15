@@ -57,13 +57,14 @@ Como formas de receita, estão previstos:
 
 | Equipe | Jogo | Entrega 1 |
 |-|-|-|
-| [Projeto PATO](https://github.com/Projeto-PATO) | [Além das Montanhas](https://github.com/Projeto-PATO/Alem-das-Montanhas) | 6 |
+| [Projeto PATO](https://github.com/Projeto-PATO) | [Além das Montanhas](https://github.com/Projeto-PATO/Alem-das-Montanhas) | 8 |
 | [Manos Association ManAss](https://github.com/Manos-association-ManAss) | [Errei Mlk Pro Soccer](https://github.com/Manos-association-ManAss/ErreiFuiMlk-ProSoccer) | 6 |
 | [Pixel Quest Games](https://github.com/Pixel-Quest-Games) | [Room Riddle](https://github.com/Pixel-Quest-Games/Room-Riddle) | 6 |
 | [Syzygy Team](https://github.com/SyzygyTeam) | [Last Fate](https://github.com/SyzygyTeam/LastFate) | 6 |
 | [Hoff Games](https://github.com/Hoff-Games) | [FutHoff - A Busca pelo Troféu Dourado](https://github.com/Hoff-Games/FutHoff_-_A_Busca_pelo_Trofeu_Dourado) | 6 |
 | [HairStyle Company](https://github.com/Hairstyle-Company/SeguremOsPersas) | [Segurem os Persas!](https://github.com/Hairstyle-Company/SeguremOsPersas) | 6 |
-| [The New Hera](https://github.com/The-New-Hera) | [On the Run](https://github.com/The-New-Hera/On-The-Run) | 0 |
+| [The New Hera](https://github.com/The-New-Hera) | [On the Run](https://github.com/The-New-Hera/On-The-Run) | 6 |
 | [Pijama 13](https://github.com/pijama-13) | [labirintopia](https://github.com/pijama-13/labirintopia) | 6 |
 | [Thouer Engine](https://github.com/Thouer-Engine) | [Damn, It's Monday](https://github.com/Thouer-Engine/damnitsmonday) | 6 |
 | [Armbreakers Games](https://github.com/ARMBREAKERS-GAMES) | [Gatasma](https://github.com/ARMBREAKERS-GAMES/Gatasma) | 6 |
+| [STB Games](https://github.com/STB-Games) | [THe Conundrum](https://github.com/STB-Games/The-Conundrum) | 6 |
