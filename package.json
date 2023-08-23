@@ -1,4 +1,9 @@
 {
+  "author": "Ederson Torresini <etorresini@ifsc.edu.br>",
+  "bugs": {
+    "url": "https://github.com/boidacarapreta/adcipt20232/issues"
+  },
+  "description": "Projetos das disciplinas de Administração de Redes de Computadores (ADC) e Telefonia IP (IPT) do Curso Técnico Integrado ao Ensino Médio em Telecomunicações do Instituto Federal de Santa Catarina (IFSC) câmpus São José.",
   "devDependencies": {
     "eslint": "^8.47.0",
     "eslint-config-standard": "^17.1.0",
@@ -6,7 +11,15 @@
     "eslint-plugin-n": "^16.0.2",
     "eslint-plugin-promise": "^6.1.1"
   },
+  "homepage": "https://github.com/boidacarapreta/adcipt20232#readme",
+  "license": "MIT",
+  "name": "adcipt20232",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boidacarapreta/adcipt20232.git"
+  },
   "scripts": {
     "start": "npm start --prefix servidor"
-  }
+  },
+  "version": "0.1.0"
 }
