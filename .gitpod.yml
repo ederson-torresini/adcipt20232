@@ -1,7 +1,15 @@
+
 tasks:
-  - init: npm install --prefix servidor
+  - name: eslint
+    init: npm install eslint --save-dev
+  - name: servidor
+    init: npm install --prefix servidor
     command: npm start --prefix servidor
 
 ports:
   - port: 3000
     onOpen: open-browser
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
