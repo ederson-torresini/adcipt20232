@@ -1,7 +1,7 @@
 
 tasks:
   - name: eslint
-    init: yarn add eslint
+    init: yarn add eslint --dev
   - name: servidor
     init: yarn
     command: yarn start
