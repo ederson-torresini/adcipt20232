@@ -4,6 +4,9 @@
     "url": "https://github.com/boidacarapreta/adcipt20232/issues"
   },
   "description": "Projetos das disciplinas de Administração de Redes de Computadores (ADC) e Telefonia IP (IPT) do Curso Técnico Integrado ao Ensino Médio em Telecomunicações do Instituto Federal de Santa Catarina (IFSC) câmpus São José.",
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  },
   "engines": {
     "node": ">=14"
   },
