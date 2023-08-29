@@ -2,6 +2,8 @@
 
 Projetos das disciplinas de Administração de Redes de Computadores (ADC) e Telefonia IP (IPT) do Curso Técnico Integrado ao Ensino Médio em Telecomunicações do Instituto Federal de Santa Catarina (IFSC) câmpus São José.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/boidacarapreta/adcipt20232)
+
 ## Premissa básica do jogo
 
 Dois irmãos, Tobias e Lola, acordam em um labirinto. Ou melhor, acordam separados, cada um em um lugar do labirinto. Nos seus bolsos, um comunicador e uma lanterna. Eles devem, juntos, acharem a saída desse labirinto de várias camadas que, parece, ao que tudo indica, apenas um sonho. Um sonho lúcido.
