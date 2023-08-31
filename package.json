@@ -18,8 +18,8 @@
     "url": "git+https://github.com/boidacarapreta/adcipt20232.git"
   },
   "scripts": {
-    "install": "yarn --cwd servidor install",
-    "start": "yarn --cwd servidor start"
+    "install": "npm install --prefix servidor",
+    "start": "npm start --prefix servidor start"
   },
   "version": "0.1.0"
 }
