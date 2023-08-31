@@ -19,7 +19,7 @@
   },
   "scripts": {
     "install": "npm install --prefix servidor",
-    "start": "npm start --prefix servidor start"
+    "start": "npm start --prefix servidor"
   },
   "version": "0.1.0"
 }
