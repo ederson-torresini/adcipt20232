@@ -15,6 +15,11 @@ export default class labirinto extends Phaser.Scene {
     this.load.image('plantas', '../assets/mapa/plantas.png')
     this.load.image('sombras-plantas', '../assets/mapa/sombras-plantas.png')
     this.load.image('sombras', '../assets/mapa/sombras.png')
+
+    this.load.spritesheet('tobias', '../assets/tobias.png', {
+      frameWidth: 36,
+      frameHeight: 52
+    })
   }
 
   create () {
@@ -33,15 +38,22 @@ export default class labirinto extends Phaser.Scene {
     this.tilesetSombras = this.tilemapLabirinto.addTilesetImage('sombras')
 
     this.layerTerreno = this.tilemapLabirinto.createLayer('terreno', [this.tilesetGrama])
-    this.layerTerreno.setCollisionByProperty({ collides: true })
-    // this.physics.add.collider(this.personagem, this.layerTerreno)
     this.layerSombras = this.tilemapLabirinto.createLayer('sombras', [this.tilesetSombrasPlantas, this.tilesetSombras])
     this.layerPlantas = this.tilemapLabirinto.createLayer('plantas', [this.tilesetPlantas])
-    this.layerPlantas.setCollisionByProperty({ collides: true })
     this.layerItens = this.tilemapLabirinto.createLayer('itens', [this.tilesetItens])
-    this.layerItens.setCollisionByProperty({ collides: true })
     this.layerParedes = this.tilemapLabirinto.createLayer('paredes', [this.tilesetBlocos, this.tilesetParedes])
+
+    this.personagem = this.physics.add.sprite(400, 225, 'tobias', 18)
+
+    this.layerTerreno.setCollisionByProperty({ collides: true })
+    this.layerPlantas.setCollisionByProperty({ collides: true })
+    this.layerItens.setCollisionByProperty({ collides: true })
     this.layerParedes.setCollisionByProperty({ collides: true })
+
+    this.physics.add.collider(this.personagem, this.layerTerreno)
+    this.physics.add.collider(this.personagem, this.layerPlantas)
+    this.physics.add.collider(this.personagem, this.layerItens)
+    this.physics.add.collider(this.personagem, this.layerParedes)
   }
 
   update () { }
