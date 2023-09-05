@@ -62,7 +62,8 @@ export default class labirinto extends Phaser.Scene {
     this.layerItens = this.tilemapLabirinto.createLayer('itens', [this.tilesetItens])
     this.layerParedes = this.tilemapLabirinto.createLayer('paredes', [this.tilesetBlocos, this.tilesetParedes])
 
-    this.personagem = this.physics.add.sprite(400, 225, 'tobias', 18)
+    this.personagem = this.physics.add.sprite(-350, -80, 'tobias', 18)
+    this.cameras.main.startFollow(this.personagem)
 
     this.anims.create({
       key: 'tobias-parado',
