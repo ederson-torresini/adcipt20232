@@ -159,6 +159,16 @@ export default class labirinto extends Phaser.Scene {
         this.personagem.anims.play('tobias-parado')
         this.personagem.setVelocityY(0)
       })
+
+    this.layerTerreno.setCollisionByProperty({ collides: true })
+    this.layerPlantas.setCollisionByProperty({ collides: true })
+    this.layerItens.setCollisionByProperty({ collides: true })
+    this.layerParedes.setCollisionByProperty({ collides: true })
+
+    this.physics.add.collider(this.personagem, this.layerTerreno)
+    this.physics.add.collider(this.personagem, this.layerPlantas)
+    this.physics.add.collider(this.personagem, this.layerItens)
+    this.physics.add.collider(this.personagem, this.layerParedes)
   }
 
   update () { }
