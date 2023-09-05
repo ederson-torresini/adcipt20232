@@ -55,6 +55,55 @@ Como formas de receita, estão previstos:
 - Compra de créditos para estender o relógio;
 - Personalização de personagens e mapas.
 
+### Cenas do jogo
+
+O jogo tem poucas cenas. A primeira, de abertura, é apenas para apresentar o jogo com uma imagem de capa e um texto, o qual deve ser clicado para avançar para a próxima cena:
+
+```mermaid
+flowchart TD
+  A([Início])
+  B[Cena de abertura]
+  C[Próxima cena:\nLabirinto]
+  Z([Fim])
+
+  A --> B
+  B --> |Usuário clica no botão| C
+  C --> Z
+```
+
+Na cen seguinte, a principal do jogo, os dois jogadores estão em um labirinto, onde devem chegar ao final antes do contador regressivo:
+
+```mermaid
+flowchart TD
+  A([Início])
+  B(Cena do labirinto)
+  C{Acharam a\nsaída antes\nde terminar\no tempo?}
+  X[Próxima cena:\nFinal feliz]
+  Y[Próxima cena:\nFinal triste]
+  Z([Fim])
+
+  A --> B
+  B--> C
+  C --> |Sim| X
+  C --> |Não| Y
+  X --> Z
+  Y --> Z
+```
+
+As duas cenas de final feliz e triste têm função equivalente, que é de indicar o final para os jogadores e voltar para a tela de abertura:
+
+```mermaid
+flowchart TD
+  A([Início])
+  B[Cena de final\nfeliz ou triste]
+  C[Próxima cena:\nAbertura]
+  Z([Fim])
+
+  A --> B
+  B --> |Usuário clica no botão| C
+  C --> Z
+```
+
 ## Jogos das Equipes
 
 | Equipe | Jogo | Entrega 1 | Entrega 2 |
