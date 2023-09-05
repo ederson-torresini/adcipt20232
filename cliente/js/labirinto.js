@@ -43,7 +43,50 @@ export default class labirinto extends Phaser.Scene {
     this.layerItens = this.tilemapLabirinto.createLayer('itens', [this.tilesetItens])
     this.layerParedes = this.tilemapLabirinto.createLayer('paredes', [this.tilesetBlocos, this.tilesetParedes])
 
-    this.personagem = this.physics.add.sprite(400, 225, 'tobias', 18)
+    this.personagem = this.physics.add.sprite(-350, -80, 'tobias', 18)
+
+    this.anims.create({
+      key: 'tobias-parado',
+      frames: this.anims.generateFrameNumbers('tobias', {
+        start: 18,
+        end: 18
+      }),
+      frameRate: 1
+    })
+    this.anims.create({
+      key: 'tobias-esquerda',
+      frames: this.anims.generateFrameNumbers('tobias', {
+        start: 9,
+        end: 17
+      }), frameRate: 12,
+      repeat: -1
+    })
+    this.anims.create({
+      key: 'tobias-direita',
+      frames: this.anims.generateFrameNumbers('tobias', {
+        start: 27,
+        end: 35
+      }), frameRate: 12,
+      repeat: -1
+    })
+    this.anims.create({
+      key: 'tobias-cima',
+      frames: this.anims.generateFrameNumbers('tobias', {
+        start: 0,
+        end: 8
+      }),
+      frameRate: 12,
+      repeat: -1
+    })
+    this.anims.create({
+      key: 'tobias-baixo',
+      frames: this.anims.generateFrameNumbers('tobias', {
+        start: 18,
+        end: 26
+      }),
+      frameRate: 12,
+      repeat: -1
+    })
 
     this.layerTerreno.setCollisionByProperty({ collides: true })
     this.layerPlantas.setCollisionByProperty({ collides: true })
