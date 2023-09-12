@@ -23,6 +23,11 @@ export default class labirinto extends Phaser.Scene {
       frameHeight: 52
     })
 
+    this.load.spritesheet('cristal', './assets/cristal.png', {
+      frameWidth: 32,
+      frameHeight: 56
+    })
+
     this.load.spritesheet('esquerda', '../assets/esquerda.png', {
       frameWidth: 64,
       frameHeight: 64
@@ -108,6 +113,20 @@ export default class labirinto extends Phaser.Scene {
       repeat: -1
     })
 
+    this.cristal = this.physics.add.sprite(200, -30, 'cristal')
+
+    this.anims.create({
+      key: 'cristal-brilhando',
+      frames: this.anims.generateFrameNumbers('cristal', {
+        start: 0,
+        end: 3
+      }),
+      frameRate: 4,
+      repeat: -1
+    })
+
+    this.cristal.anims.play('cristal-brilhando')
+
     this.esquerda = this.add.sprite(50, 350, 'esquerda')
       .setScrollFactor(0)
       .setInteractive()
@@ -170,7 +189,13 @@ export default class labirinto extends Phaser.Scene {
     this.physics.add.collider(this.personagem, this.layerPlantas)
     this.physics.add.collider(this.personagem, this.layerItens)
     this.physics.add.collider(this.personagem, this.layerParedes)
+
+    this.physics.add.collider(this.personagem, this.cristal, this.coletar_cristal, null, this)
   }
 
   update () { }
+
+  coletar_cristal () {
+    this.cristal.disableBody(true, true)
+  }
 }
