@@ -23,9 +23,9 @@ export default class labirinto extends Phaser.Scene {
       frameHeight: 52
     })
 
-    this.load.spritesheet('cristal', './assets/cristal.png', {
+    this.load.spritesheet('moeda', './assets/moeda.png', {
       frameWidth: 32,
-      frameHeight: 56
+      frameHeight: 32
     })
 
     this.load.spritesheet('esquerda', '../assets/esquerda.png', {
@@ -113,19 +113,19 @@ export default class labirinto extends Phaser.Scene {
       repeat: -1
     })
 
-    this.cristal = this.physics.add.sprite(200, -30, 'cristal')
+    this.moeda = this.physics.add.sprite(200, -30, 'moeda')
 
     this.anims.create({
-      key: 'cristal-brilhando',
-      frames: this.anims.generateFrameNumbers('cristal', {
+      key: 'moeda-brilhando',
+      frames: this.anims.generateFrameNumbers('moeda', {
         start: 0,
         end: 3
       }),
-      frameRate: 4,
+      frameRate: 12,
       repeat: -1
     })
 
-    this.cristal.anims.play('cristal-brilhando')
+    this.moeda.anims.play('moeda-brilhando')
 
     this.esquerda = this.add.sprite(50, 350, 'esquerda')
       .setScrollFactor(0)
@@ -190,12 +190,12 @@ export default class labirinto extends Phaser.Scene {
     this.physics.add.collider(this.personagem, this.layerItens)
     this.physics.add.collider(this.personagem, this.layerParedes)
 
-    this.physics.add.collider(this.personagem, this.cristal, this.coletar_cristal, null, this)
+    this.physics.add.collider(this.personagem, this.moeda, this.coletar_moeda, null, this)
   }
 
   update () { }
 
-  coletar_cristal () {
-    this.cristal.disableBody(true, true)
+  coletar_moeda () {
+    this.moeda.disableBody(true, true)
   }
 }
