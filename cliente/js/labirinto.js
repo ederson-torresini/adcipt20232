@@ -45,10 +45,15 @@ export default class labirinto extends Phaser.Scene {
       frameHeight: 64
     })
 
+    this.load.audio('trilha', '../assets/jardim-secreto.mp3')
     this.load.audio('moeda-som', '../assets/moeda.mp3')
   }
 
   create () {
+    this.trilha = this.sound.add('trilha')
+    this.trilha.loop = true
+    this.trilha.play()
+
     this.tilemapLabirinto = this.make.tilemap({
       key: 'labirinto'
     })
@@ -201,5 +206,7 @@ export default class labirinto extends Phaser.Scene {
   coletar_moeda () {
     this.moedaSom.play()
     this.moeda.disableBody(true, true)
+    this.game.scene.stop('labirinto')
+    this.game.scene.start('final-triste')
   }
 }

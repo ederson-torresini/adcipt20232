@@ -15,6 +15,7 @@ export default class finalTriste extends Phaser.Scene {
         this.game.scene.stop('final-triste')
         this.game.scene.start('abertura')
       })
+    this.game.scene.getScene('labirinto').trilha.stop()
   }
 
   update () { }
