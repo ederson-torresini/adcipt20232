@@ -44,6 +44,8 @@ export default class labirinto extends Phaser.Scene {
       frameWidth: 64,
       frameHeight: 64
     })
+
+    this.load.audio('moeda-som', '../assets/moeda.mp3')
   }
 
   create () {
@@ -114,6 +116,7 @@ export default class labirinto extends Phaser.Scene {
     })
 
     this.moeda = this.physics.add.sprite(200, -30, 'moeda')
+    this.moedaSom = this.sound.add('moeda-som')
 
     this.anims.create({
       key: 'moeda-brilhando',
@@ -196,6 +199,7 @@ export default class labirinto extends Phaser.Scene {
   update () { }
 
   coletar_moeda () {
+    this.moedaSom.play()
     this.moeda.disableBody(true, true)
   }
 }
