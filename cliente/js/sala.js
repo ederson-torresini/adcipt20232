@@ -4,7 +4,6 @@ export default class sala extends Phaser.Scene {
   }
 
   preload () {
-    this.load.image('fundo', './assets.fundo-sala.png')
   }
 
   create () {

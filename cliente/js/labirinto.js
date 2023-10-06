@@ -23,6 +23,11 @@ export default class labirinto extends Phaser.Scene {
       frameHeight: 52
     })
 
+    this.load.spritesheet('lola', '../assets/lola.png', {
+      frameWidth: 36,
+      frameHeight: 52
+    })
+
     this.load.spritesheet('moeda', './assets/moeda.png', {
       frameWidth: 32,
       frameHeight: 32
@@ -74,7 +79,14 @@ export default class labirinto extends Phaser.Scene {
     this.layerItens = this.tilemapLabirinto.createLayer('itens', [this.tilesetItens])
     this.layerParedes = this.tilemapLabirinto.createLayer('paredes', [this.tilesetBlocos, this.tilesetParedes])
 
-    this.personagem = this.physics.add.sprite(-350, -80, 'tobias', 18)
+    if (this.game.jogadores.primeiro === this.game.socket.id) {
+      this.personagem = this.physics.add.sprite(-350, -80, 'tobias', 18)
+    } else if (this.game.jogadores.segundo === this.game.socket.id) {
+      this.personagem = this.physics.add.sprite(1184, -80, 'lola', 5)
+    } else {
+
+    }
+
     this.cameras.main.startFollow(this.personagem)
 
     this.anims.create({
