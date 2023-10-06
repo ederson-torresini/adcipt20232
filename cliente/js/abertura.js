@@ -20,7 +20,7 @@ export default class abertura extends Phaser.Scene {
       .on('pointerdown', () => {
         this.game.scene.stop('abertura')
         this.scale.startFullscreen()
-        this.game.scene.start('labirinto')
+        this.game.scene.start('sala')
       })
 
     this.tela_cheia = this.add

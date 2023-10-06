@@ -1,4 +1,3 @@
-
 tasks:
   - name: eslint
     init: npm install eslint --save-dev
