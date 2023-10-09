@@ -80,51 +80,61 @@ export default class labirinto extends Phaser.Scene {
     this.layerParedes = this.tilemapLabirinto.createLayer('paredes', [this.tilesetBlocos, this.tilesetParedes])
 
     if (this.game.jogadores.primeiro === this.game.socket.id) {
-      this.personagem = this.physics.add.sprite(-350, -80, 'tobias', 18)
+      this.local = 'tobias'
+      this.remoto = 'lola'
+      this.personagem = this.physics.add.sprite(-350, -80, this.local, 18)
+      this.personagemRemoto = this.add.sprite(1184, -80, this.remoto, 18)
     } else if (this.game.jogadores.segundo === this.game.socket.id) {
-      this.personagem = this.physics.add.sprite(1184, -80, 'lola', 5)
+      this.local = 'lola'
+      this.remoto = 'tobias'
+      this.personagemRemoto = this.add.sprite(-350, -80, this.remoto, 18)
+      this.personagem = this.physics.add.sprite(1184, -80, this.local, 18)
     } else {
-
+      // jogador em sala cheia
     }
 
     this.cameras.main.startFollow(this.personagem)
 
     this.anims.create({
-      key: 'tobias-parado',
-      frames: this.anims.generateFrameNumbers('tobias', {
+      key: 'personagem-parado',
+      frames: this.anims.generateFrameNumbers(this.local, {
         start: 18,
         end: 18
       }),
       frameRate: 1
     })
+    
     this.anims.create({
-      key: 'tobias-esquerda',
-      frames: this.anims.generateFrameNumbers('tobias', {
+      key: 'personagem-esquerda',
+      frames: this.anims.generateFrameNumbers(this.local, {
         start: 9,
         end: 17
       }), frameRate: 12,
       repeat: -1
     })
+
     this.anims.create({
-      key: 'tobias-direita',
-      frames: this.anims.generateFrameNumbers('tobias', {
+      key: 'personagem-direita',
+      frames: this.anims.generateFrameNumbers(this.local, {
         start: 27,
         end: 35
       }), frameRate: 12,
       repeat: -1
     })
+
     this.anims.create({
-      key: 'tobias-cima',
-      frames: this.anims.generateFrameNumbers('tobias', {
+      key: 'personagem-cima',
+      frames: this.anims.generateFrameNumbers(this.local, {
         start: 0,
         end: 8
       }),
       frameRate: 12,
       repeat: -1
     })
+
     this.anims.create({
-      key: 'tobias-baixo',
-      frames: this.anims.generateFrameNumbers('tobias', {
+      key: 'personagem-baixo',
+      frames: this.anims.generateFrameNumbers(this.local, {
         start: 18,
         end: 26
       }),
@@ -152,51 +162,54 @@ export default class labirinto extends Phaser.Scene {
       .setInteractive()
       .on('pointerover', () => {
         this.esquerda.setFrame(1)
-        this.personagem.anims.play('tobias-esquerda')
+        this.personagem.anims.play('personagem-esquerda')
         this.personagem.setVelocityX(-this.velocidade)
       })
       .on('pointerout', () => {
         this.esquerda.setFrame(0)
-        this.personagem.anims.play('tobias-parado')
+        this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityX(0)
       })
+    
     this.direita = this.add.sprite(150, 350, 'direita')
       .setScrollFactor(0)
       .setInteractive()
       .on('pointerover', () => {
         this.direita.setFrame(1)
-        this.personagem.anims.play('tobias-direita')
+        this.personagem.anims.play('personagem-direita')
         this.personagem.setVelocityX(this.velocidade)
       })
       .on('pointerout', () => {
         this.direita.setFrame(0)
-        this.personagem.anims.play('tobias-parado')
+        this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityX(0)
       })
+    
     this.cima = this.add.sprite(100, 300, 'cima')
       .setScrollFactor(0)
       .setInteractive()
       .on('pointerover', () => {
         this.cima.setFrame(1)
-        this.personagem.anims.play('tobias-cima')
+        this.personagem.anims.play('personagem-cima')
         this.personagem.setVelocityY(-this.velocidade)
       })
       .on('pointerout', () => {
         this.cima.setFrame(0)
-        this.personagem.anims.play('tobias-parado')
+        this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityY(0)
       })
+    
     this.baixo = this.add.sprite(100, 400, 'baixo')
       .setScrollFactor(0)
       .setInteractive()
       .on('pointerover', () => {
         this.baixo.setFrame(1)
-        this.personagem.anims.play('tobias-baixo')
+        this.personagem.anims.play('personagem-baixo')
         this.personagem.setVelocityY(this.velocidade)
       })
       .on('pointerout', () => {
         this.baixo.setFrame(0)
-        this.personagem.anims.play('tobias-parado')
+        this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityY(0)
       })
 
