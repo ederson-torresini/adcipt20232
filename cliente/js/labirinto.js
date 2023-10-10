@@ -103,7 +103,7 @@ export default class labirinto extends Phaser.Scene {
       }),
       frameRate: 1
     })
-    
+
     this.anims.create({
       key: 'personagem-esquerda',
       frames: this.anims.generateFrameNumbers(this.local, {
@@ -170,7 +170,7 @@ export default class labirinto extends Phaser.Scene {
         this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityX(0)
       })
-    
+
     this.direita = this.add.sprite(150, 350, 'direita')
       .setScrollFactor(0)
       .setInteractive()
@@ -184,7 +184,7 @@ export default class labirinto extends Phaser.Scene {
         this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityX(0)
       })
-    
+
     this.cima = this.add.sprite(100, 300, 'cima')
       .setScrollFactor(0)
       .setInteractive()
@@ -198,7 +198,7 @@ export default class labirinto extends Phaser.Scene {
         this.personagem.anims.play('personagem-parado')
         this.personagem.setVelocityY(0)
       })
-    
+
     this.baixo = this.add.sprite(100, 400, 'baixo')
       .setScrollFactor(0)
       .setInteractive()
@@ -224,9 +224,26 @@ export default class labirinto extends Phaser.Scene {
     this.physics.add.collider(this.personagem, this.layerParedes)
 
     this.physics.add.collider(this.personagem, this.moeda, this.coletar_moeda, null, this)
+
+    this.game.socket.on('estado-notificar', ({ cena, x, y, frame }) => {
+      this.personagemRemoto.x = x
+      this.personagemRemoto.y = y
+      this.personagemRemoto.setFrame(frame)
+    })
   }
 
-  update () { }
+  update () {
+    try {
+      this.game.socket.emit('estado-publicar', this.game.sala, {
+        cena: 'labirinto',
+        x: this.personagem.x,
+        y: this.personagem.y,
+        frame: this.personagem.frame.name
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   coletar_moeda () {
     this.moedaSom.play()

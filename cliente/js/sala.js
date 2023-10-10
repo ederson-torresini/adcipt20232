@@ -33,6 +33,7 @@ export default class sala extends Phaser.Scene {
             this.game.scene.start('labirinto')
           })
           this.game.socket.emit('entrar-na-sala', sala.numero)
+          this.game.sala = sala.numero
           this.aguarde = this.add
             .text(this.game.config.width / 2,
               this.game.config.heigth / 2,
