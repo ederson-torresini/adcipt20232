@@ -89,9 +89,60 @@ export default class labirinto extends Phaser.Scene {
       this.remoto = 'tobias'
       this.personagemRemoto = this.add.sprite(-350, -80, this.remoto, 18)
       this.personagem = this.physics.add.sprite(1184, -80, this.local, 18)
-    } else {
-      // jogador em sala cheia
+
+      navigator.mediaDevices
+        .getUserMedia({ video: false, audio: true })
+        .then((stream) => {
+          this.game.localConnection = new RTCPeerConnection(this.game.ice_servers)
+
+          this.game.localConnection.onicecandidate = ({ candidate }) =>
+            candidate && this.game.socket.emit('candidate', this.game.sala, candidate)
+
+          this.game.localConnection.ontrack = ({ streams: [stream] }) =>
+            this.game.audio.srcObject = stream
+
+          stream
+            .getTracks()
+            .forEach((track) => this.game.localConnection.addTrack(track, stream))
+
+          this.game.localConnection
+            .createOffer()
+            .then((offer) => this.game.localConnection.setLocalDescription(offer))
+            .then(() => this.game.socket.emit('offer', this.game.sala, this.game.localConnection.localDescription))
+
+          this.game.midias = stream
+        })
+        .catch((error) => console.error(error))
     }
+
+    this.game.socket.on('offer', (description) => {
+      this.game.remoteConnection = new RTCPeerConnection(this.game.ice_servers)
+
+      this.game.remoteConnection.onicecandidate = ({ candidate }) =>
+        candidate && this.game.socket.emit('candidate', this.game.sala, candidate)
+
+      this.game.remoteConnection.ontrack = ({ streams: [midia] }) =>
+        this.game.audio.srcObject = midia
+
+      this.game.midias
+        .getTracks()
+        .forEach((track) => this.game.remoteConnection.addTrack(track, this.game.midias))
+
+      this.game.remoteConnection
+        .setRemoteDescription(description)
+        .then(() => this.game.remoteConnection.createAnswer())
+        .then((answer) => this.game.remoteConnection.setLocalDescription(answer))
+        .then(() => this.game.socket.emit('answer', this.game.sala, this.game.remoteConnection.localDescription))
+    })
+
+    this.game.socket.on('answer', (description) =>
+      this.game.localConnection.setRemoteDescription(description)
+    )
+
+    this.game.socket.on('candidate', (candidate) => {
+      const conn = this.game.localConnection || this.game.remoteConnection
+      conn.addIceCandidate(new RTCIceCandidate(candidate))
+    })
 
     this.cameras.main.startFollow(this.personagem)
 
