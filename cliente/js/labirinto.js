@@ -90,8 +90,7 @@ export default class labirinto extends Phaser.Scene {
       this.personagemRemoto = this.add.sprite(-350, -80, this.remoto, 18)
       this.personagem = this.physics.add.sprite(1184, -80, this.local, 18)
 
-      navigator.mediaDevices
-        .getUserMedia({ video: false, audio: true })
+      navigator.mediaDevices.getUserMedia({ video: false, audio: true })
         .then((stream) => {
           this.game.localConnection = new RTCPeerConnection(this.game.ice_servers)
 
@@ -101,12 +100,10 @@ export default class labirinto extends Phaser.Scene {
           this.game.localConnection.ontrack = ({ streams: [stream] }) =>
             this.game.audio.srcObject = stream
 
-          stream
-            .getTracks()
+          stream.getTracks()
             .forEach((track) => this.game.localConnection.addTrack(track, stream))
 
-          this.game.localConnection
-            .createOffer()
+          this.game.localConnection.createOffer()
             .then((offer) => this.game.localConnection.setLocalDescription(offer))
             .then(() => this.game.socket.emit('offer', this.game.sala, this.game.localConnection.localDescription))
 
@@ -124,12 +121,10 @@ export default class labirinto extends Phaser.Scene {
       this.game.remoteConnection.ontrack = ({ streams: [midia] }) =>
         this.game.audio.srcObject = midia
 
-      this.game.midias
-        .getTracks()
+      this.game.midias.getTracks()
         .forEach((track) => this.game.remoteConnection.addTrack(track, this.game.midias))
 
-      this.game.remoteConnection
-        .setRemoteDescription(description)
+      this.game.remoteConnection.setRemoteDescription(description)
         .then(() => this.game.remoteConnection.createAnswer())
         .then((answer) => this.game.remoteConnection.setLocalDescription(answer))
         .then(() => this.game.socket.emit('answer', this.game.sala, this.game.remoteConnection.localDescription))

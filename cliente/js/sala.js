@@ -50,8 +50,7 @@ export default class sala extends Phaser.Scene {
           this.game.scene.start('labirinto')
         } else if (jogadores.primeiro) {
           this.mensagem.setText('Aguardando segundo jogador...')
-          navigator.mediaDevices
-            .getUserMedia({ video: false, audio: true })
+          navigator.mediaDevices.getUserMedia({ video: false, audio: true })
             .then((stream) => {
               this.game.midias = stream
             })
