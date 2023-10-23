@@ -109,7 +109,8 @@ export default class labirinto extends Phaser.Scene {
       frames: this.anims.generateFrameNumbers(this.local, {
         start: 9,
         end: 17
-      }), frameRate: 12,
+      }),
+      frameRate: 12,
       repeat: -1
     })
 
@@ -118,7 +119,8 @@ export default class labirinto extends Phaser.Scene {
       frames: this.anims.generateFrameNumbers(this.local, {
         start: 27,
         end: 35
-      }), frameRate: 12,
+      }),
+      frameRate: 12,
       repeat: -1
     })
 
