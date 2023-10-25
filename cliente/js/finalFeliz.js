@@ -4,7 +4,7 @@ export default class finalFeliz extends Phaser.Scene {
   }
 
   preload () {
-    this.load.spritesheet('yin-yang', '../assets/yin-yang.png', { frameWidth: 250, frameHeight: 250 })
+    this.load.spritesheet('yin-yang', './assets/yin-yang.png', { frameWidth: 250, frameHeight: 250 })
   }
 
   create () {
@@ -25,7 +25,7 @@ export default class finalFeliz extends Phaser.Scene {
         this.game.scene.stop('final-feliz')
         this.game.scene.start('abertura')
       })
-    
+
     this.cameras.main.setZoom(4)
   }
 

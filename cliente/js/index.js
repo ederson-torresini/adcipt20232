@@ -11,6 +11,7 @@ class Game extends Phaser.Game {
 
     let iceServers
     if (window.location.host === 'feira-de-jogos.sj.ifsc.edu.br') {
+      this.socket = io.connect({ path: '/adcipt20232/socket.io/' })
       iceServers = [
         {
           urls: 'stun:feira-de-jogos.sj.ifsc.edu.br'
@@ -22,6 +23,7 @@ class Game extends Phaser.Game {
         }
       ]
     } else {
+      this.socket = io()
       iceServers = [
         {
           urls: 'stun:stun.l.google.com:19302'
@@ -31,7 +33,6 @@ class Game extends Phaser.Game {
     this.iceServers = { iceServers }
     this.audio = document.querySelector('audio')
 
-    this.socket = io()
     this.socket.on('connect', () => {
       console.log('Conectado ao servidor!')
     })
@@ -42,7 +43,7 @@ class Game extends Phaser.Game {
     this.scene.add('final-feliz', finalFeliz)
     this.scene.add('final-triste', finalTriste)
 
-    this.scene.start('abertura')
+    this.scene.start('final-triste')
   }
 }
 

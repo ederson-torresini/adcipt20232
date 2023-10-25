@@ -4,7 +4,7 @@ export default class finalTriste extends Phaser.Scene {
   }
 
   preload () {
-    this.load.image('final-triste', '../assets/final-triste.png')
+    this.load.image('final-triste', './assets/final-triste.png')
   }
 
   create () {

@@ -6,24 +6,24 @@ export default class labirinto extends Phaser.Scene {
   }
 
   preload () {
-    this.load.tilemapTiledJSON('labirinto', '../assets/mapa/labirinto.json')
+    this.load.tilemapTiledJSON('labirinto', './assets/mapa/labirinto.json')
 
-    this.load.image('blocos', '../assets/mapa/blocos.png')
-    this.load.image('grama', '../assets/mapa/grama.png')
-    this.load.image('itens', '../assets/mapa/itens.png')
-    this.load.image('paredes', '../assets/mapa/paredes.png')
-    this.load.image('pedras', '../assets/mapa/pedras.png')
-    this.load.image('personagem', '../assets/mapa/personagem.png')
-    this.load.image('plantas', '../assets/mapa/plantas.png')
-    this.load.image('sombras-plantas', '../assets/mapa/sombras-plantas.png')
-    this.load.image('sombras', '../assets/mapa/sombras.png')
+    this.load.image('blocos', './assets/mapa/blocos.png')
+    this.load.image('grama', './assets/mapa/grama.png')
+    this.load.image('itens', './assets/mapa/itens.png')
+    this.load.image('paredes', './assets/mapa/paredes.png')
+    this.load.image('pedras', './assets/mapa/pedras.png')
+    this.load.image('personagem', './assets/mapa/personagem.png')
+    this.load.image('plantas', './assets/mapa/plantas.png')
+    this.load.image('sombras-plantas', './assets/mapa/sombras-plantas.png')
+    this.load.image('sombras', './assets/mapa/sombras.png')
 
-    this.load.spritesheet('tobias', '../assets/tobias.png', {
+    this.load.spritesheet('tobias', './assets/tobias.png', {
       frameWidth: 36,
       frameHeight: 52
     })
 
-    this.load.spritesheet('lola', '../assets/lola.png', {
+    this.load.spritesheet('lola', './assets/lola.png', {
       frameWidth: 36,
       frameHeight: 52
     })
@@ -33,25 +33,25 @@ export default class labirinto extends Phaser.Scene {
       frameHeight: 32
     })
 
-    this.load.spritesheet('esquerda', '../assets/esquerda.png', {
+    this.load.spritesheet('esquerda', './assets/esquerda.png', {
       frameWidth: 64,
       frameHeight: 64
     })
-    this.load.spritesheet('direita', '../assets/direita.png', {
+    this.load.spritesheet('direita', './assets/direita.png', {
       frameWidth: 64,
       frameHeight: 64
     })
-    this.load.spritesheet('cima', '../assets/cima.png', {
+    this.load.spritesheet('cima', './assets/cima.png', {
       frameWidth: 64,
       frameHeight: 64
     })
-    this.load.spritesheet('baixo', '../assets/baixo.png', {
+    this.load.spritesheet('baixo', './assets/baixo.png', {
       frameWidth: 64,
       frameHeight: 64
     })
 
-    this.load.audio('trilha', '../assets/jardim-secreto.mp3')
-    this.load.audio('moeda-som', '../assets/moeda.mp3')
+    this.load.audio('trilha', './assets/jardim-secreto.mp3')
+    this.load.audio('moeda-som', './assets/moeda.mp3')
   }
 
   create () {

@@ -4,7 +4,7 @@ export default class abertura extends Phaser.Scene {
   }
 
   preload () {
-    this.load.image('capa', '../assets/capa.png')
+    this.load.image('capa', './assets/capa.png')
 
     this.load.spritesheet('tela-cheia', './assets/tela-cheia.png', {
       frameWidth: 64,
