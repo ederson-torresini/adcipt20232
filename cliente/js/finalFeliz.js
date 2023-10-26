@@ -4,9 +4,16 @@ export default class finalFeliz extends Phaser.Scene {
   }
 
   preload () {
+    this.load.audio('clique', './assets/clique.mp3')
+    this.load.audio('credito', './assets/credito.mp3')
+    this.load.audio('erro', './assets/erro.mp3')
   }
 
   create () {
+    this.clique = this.sound.add('clique')
+    this.credito = this.sound.add('credito')
+    this.erro = this.sound.add('erro')
+
     this.posicao = ''
 
     this.usuarioTextoBase = 'Usuário: '
@@ -18,6 +25,7 @@ export default class finalFeliz extends Phaser.Scene {
     })
       .setInteractive()
       .on('pointerdown', () => {
+        this.clique.play()
         this.posicao = 'usuário'
         this.usuario.setFill('#ffffff')
         this.senha.setFill('#cccccc')
@@ -34,6 +42,7 @@ export default class finalFeliz extends Phaser.Scene {
     })
       .setInteractive()
       .on('pointerdown', () => {
+        this.clique.play()
         this.posicao = 'senha'
         this.usuario.setFill('#cccccc')
         this.senha.setFill('#ffffff')
@@ -51,6 +60,7 @@ export default class finalFeliz extends Phaser.Scene {
       })
         .setInteractive()
         .on('pointerdown', () => {
+          this.clique.play()
           if (this.posicao === 'usuário') {
             if (this.usuarioDigitado.length < 4) {
               this.usuarioDigitado += valor
@@ -82,18 +92,45 @@ export default class finalFeliz extends Phaser.Scene {
                 })
                   .then((response) => {
                     if (response.status === 200) {
+                      this.credito.play()
                       this.enviar.destroy()
+                      this.tempo = 2
+                      this.relogio = this.time.addEvent({
+                        delay: 1000,
+                        callback: () => {
+                          this.tempo--
+                          if (this.tempo === 0) {
+                            this.relogio.destroy()
+                            this.scene.stop('final-feliz')
+                            this.scene.start('abertura')
+                          }
+                        },
+                        callbackScope: this,
+                        loop: true
+                      })
                     }
                   })
                   .catch((error) => {
-                    if (error.status === 401) {
+                    if (error.response.status === 401) {
+                      this.erro.play()
                       this.enviar.text = '[401]'
+                      this.tempo = 2
+                      this.relogio = this.time.addEvent({
+                        delay: 1000,
+                        callback: () => {
+                          this.tempo--
+                          if (this.tempo === 0) {
+                            this.relogio.destroy()
+                            this.enviar.destroy()
+                          }
+                        },
+                        callbackScope: this,
+                        loop: true
+                      })
                     }
                     console.error(error)
                   })
               })
-          } else {
-            if (this.enviar) this.enviar.destroy()
           }
         })
     })
@@ -105,6 +142,7 @@ export default class finalFeliz extends Phaser.Scene {
     })
       .setInteractive()
       .on('pointerdown', () => {
+        this.clique.play()
         if (this.posicao === 'usuário') {
           if (this.usuarioDigitado.length > 0) {
             this.usuarioDigitado = this.usuarioDigitado.slice(0, -1)
@@ -118,6 +156,14 @@ export default class finalFeliz extends Phaser.Scene {
               senhaOculta += '*'
             })
             this.senha.text = this.senhaTextoBase + senhaOculta
+          }
+        }
+
+        if (this.usuarioDigitado.length !== 4 || this.senhaDigitada.length !== 4) {
+          try {
+            this.enviar.destroy()
+          } catch (error) {
+            console.error(error)
           }
         }
       })
