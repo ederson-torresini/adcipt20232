@@ -94,11 +94,13 @@ export default class labirinto extends Phaser.Scene {
         .then((stream) => {
           this.game.localConnection = new RTCPeerConnection(this.game.ice_servers)
 
-          this.game.localConnection.onicecandidate = ({ candidate }) =>
-            candidate && this.game.socket.emit('candidate', this.game.sala, candidate)
+          this.game.localConnection.onicecandidate = function ({ candidate }) {
+            candidate && globalThis.game.socket.emit('candidate', globalThis.game.sala, candidate)
+          }
 
-          this.game.localConnection.ontrack = ({ streams: [stream] }) =>
-            this.game.audio.srcObject = stream
+          this.game.localConnection.ontrack = function ({ streams: [stream] }) {
+            globalThis.game.audio.srcObject = stream
+          }
 
           stream.getTracks()
             .forEach((track) => this.game.localConnection.addTrack(track, stream))
@@ -115,11 +117,13 @@ export default class labirinto extends Phaser.Scene {
     this.game.socket.on('offer', (description) => {
       this.game.remoteConnection = new RTCPeerConnection(this.game.ice_servers)
 
-      this.game.remoteConnection.onicecandidate = ({ candidate }) =>
-        candidate && this.game.socket.emit('candidate', this.game.sala, candidate)
+      this.game.remoteConnection.onicecandidate = function ({ candidate }) {
+        candidate && globalThis.game.socket.emit('candidate', globalThis.game.sala, candidate)
+      }
 
-      this.game.remoteConnection.ontrack = ({ streams: [midia] }) =>
-        this.game.audio.srcObject = midia
+      this.game.remoteConnection.ontrack = function ({ streams: [midia] }) {
+        globalThis.game.audio.srcObject = midia
+      }
 
       this.game.midias.getTracks()
         .forEach((track) => this.game.remoteConnection.addTrack(track, this.game.midias))
