@@ -1,3 +1,6 @@
+import Phaser from 'phaser'
+import axios from 'axios'
+
 export default class finalFeliz extends Phaser.Scene {
   constructor () {
     super('final-feliz')
