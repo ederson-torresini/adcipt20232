@@ -35,7 +35,7 @@ const precacheResources = [
   './assets/moeda.mp3',
   './assets/tela-cheia.png',
   './assets/tobias.png',
-  '/dist/index.js'
+  './dist/index.js'
 ]
 
 // When the service worker is installing, open the cache and add the precache resources to it
