@@ -1,8 +1,12 @@
 tasks:
-  - name: eslint
-    init: npm install eslint --save-dev
+  - name: comum
+    init: npm install --production=false
   - name: servidor
-    init: npm install
+    init: npm install --prefix servidor
+    command: npm start --prefix servidor
+  - name: cliente
+    init: npm install --prefix cliente --production=false
+    command: npm run build --prefix cliente
 
 ports:
   - port: 3000

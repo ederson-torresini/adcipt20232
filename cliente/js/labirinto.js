@@ -1,3 +1,4 @@
+import Phaser from 'phaser'
 export default class labirinto extends Phaser.Scene {
   constructor () {
     super('labirinto')

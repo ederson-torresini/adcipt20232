@@ -1,3 +1,5 @@
+import Phaser from 'phaser'
+import { io } from 'socket.io-client'
 import config from './config.js'
 import abertura from './abertura.js'
 import sala from './sala.js'

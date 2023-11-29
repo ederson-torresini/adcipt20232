@@ -1,3 +1,5 @@
+import Phaser from 'phaser'
+
 export default class finalTriste extends Phaser.Scene {
   constructor () {
     super('final-triste')

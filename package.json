@@ -5,7 +5,7 @@
   },
   "description": "Projetos das disciplinas de Administração de Redes de Computadores (ADC) e Telefonia IP (IPT) do Curso Técnico Integrado ao Ensino Médio em Telecomunicações do Instituto Federal de Santa Catarina (IFSC) câmpus São José.",
   "devDependencies": {
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.2.0",
@@ -20,10 +20,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/boidacarapreta/adcipt20232.git"
-  },
-  "scripts": {
-    "install": "npm install --prefix servidor",
-    "start": "npm start --prefix servidor"
   },
   "version": "0.1.0"
 }
