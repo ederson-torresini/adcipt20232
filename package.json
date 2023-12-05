@@ -21,5 +21,10 @@
     "type": "git",
     "url": "git+https://github.com/boidacarapreta/adcipt20232.git"
   },
+  "scripts": {
+    "install": "yarn --cwd cliente && yarn --cwd servidor",
+    "build": "yarn --cwd cliente build",
+    "start": "yarn --cwd servidor start"
+  },
   "version": "0.1.0"
 }
